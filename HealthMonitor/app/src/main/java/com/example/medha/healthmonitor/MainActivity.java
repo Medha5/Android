@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         time2=(EditText)this.findViewById(R.id.intervalTime);
 
         // Get the input values.
-        String time1_str=time1.getText().toString();
-        String time2_str=time2.getText().toString();
+        final String time1_str=time1.getText().toString();
+        final String time2_str=time2.getText().toString();
 
 
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new CountDownTimer(20000,5000){
+                new CountDownTimer(10000,2000){
                     @Override
                     public void onTick(long millisUntilFinished){
                         mp.start();
